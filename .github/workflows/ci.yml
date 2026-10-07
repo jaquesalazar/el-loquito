@@ -1,0 +1,19 @@
+name: Pipeline El Loquito
+
+on: [push, pull_request]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+
+      - name: Compilación
+        run: echo "Ejecutar scripts de compilación"
+
+      - name: Pruebas
+        run: echo "Ejecutar scripts de pruebas"
+
+      - name: Artefactos
+        run: echo "Preparar artefactos generados"
